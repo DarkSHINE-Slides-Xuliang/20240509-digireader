@@ -50,21 +50,24 @@ layout: pageBar
 
 # Digital Board Reader Intro
 
-Digital Board Binary file reading, waveform plotting, root file output.
+<br>
 
+A reader desinged for Jiannan's Digital Board.
 
-**Binary file processsing:**
-- **Flexible** data header/data recognition
-- Fast header **id finding**: jump to any event id < 1 s
-- File **corruption tolerance**
+**Key features:**
 
-**Quick Plot:**
-- Waveforms plot
-- Frequency analysis
-- Single event baseline, deonising(optional)
+- Binary file processsing:
+   - **Flexible** data header/data recognition
+   - Fast header **id finding**: jump to any event id < 1 s
+   - File **corruption tolerance**
+ 
+- Quick Plot:
+   - Waveforms plot
+   - Frequency analysis
+   - Single event baseline, deonising(optional)
 
-**Root file output**
-- Event info (mean, std, max, mean, integration, id, timestamp, data length, channel n etc.) in root file. No raw data stored.
+- Root file output:
+   - Event info (mean, std, max, mean, integration, id, timestamp, data length, channel n etc.) in root file. No raw data stored.
 
 
 ---
