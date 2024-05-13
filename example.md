@@ -49,18 +49,38 @@ layout: pageBar
 ---
 
 # Digital Board Reader Intro
- 
+
 Digital Board Binary file reading, waveform plotting, root file output.
+
+
+**Binary file processsing:**
+- **Flexible** data header/data recognition
+- Fast header **id finding**: jump to any event id < 1 s
+- File **corruption tolerance**
+
+**Quick Plot:**
+- Waveforms plot
+- Frequency analysis
+- Single event baseline, deonising(optional)
+
+**Root file output**
+- Event info (mean, std, max, mean, integration, id, timestamp, data length, channel n etc.) in root file. No raw data stored.
+
+
+---
+hideInToc: true
+layout: pageBar
+---
+
+# Digital Board Reader Intro
+ 
+<br>
+
+Frequency analysis: Use Lomb-Scargle periodogram for unevenly sampled data.
 
 <div grid="~ cols-2 gap-20">
 
 <div>
-
-- Automatic data header recognition
-- Corrupted binary file handeling
-- Fast header id finding: jump to any event id < 1 s
-- Algorithms: Frequency analysis, deonising, baseline finding
-
 
 <Transform :scale="0.5">
 <PlotlyGraph filePath="/Graph/Waveform_NoiseData_20240506.noise.amp10.bin.json"/>
@@ -70,8 +90,6 @@ Digital Board Binary file reading, waveform plotting, root file output.
 
 <div>
 
-<br><br>
-Lomb-Scargle periodogram: frequency analysis for unevenly sampled data.
 
 <Transform :scale="0.65">
 <PlotlyGraph filePath="/Graph/LSP_NoiseData_20240506.noise.amp10.bin.json"/>
@@ -114,7 +132,7 @@ Denoising algorithm: Savitzky–Golay filter is more effective at **preserving h
 layout: pageBar
 ---
 
-# Known bugs on digital board firmware
+# Known bugs in digital board firmware
 
 ## Major bug 1: Data packet incomplete
 
@@ -129,7 +147,7 @@ Across different noise samples:
 | id < 264  | 264 Bytes          | 264 Bytes        |
 | id >= 264 | 264 Bytes          | 128 Bytes        |
 
-Minor bug: header 1 not starting from 0B
+**Minor bug**: header 1 not starting from 0B
 
 </div>
 
@@ -145,7 +163,7 @@ hideInToc: true
 layout: pageBar
 ---
 
-# Known bugs on digital board firmware
+# Known bugs in digital board firmware
 
 ## Major bug 2: Wired timestamp behavior
 
